@@ -55,7 +55,7 @@ By harnessing the power of machine learning and data analysis, RentSafeTO stream
 
 RentSafeTO is a comprehensive program introduced by the City of Toronto to ensure the safety and quality of rental apartment buildings within the city. The program aims to protect the rights and well-being of tenants while also holding landlords accountable for maintaining safe and habitable living conditions. RentSafeTO encompasses a range of initiatives and evaluations that help identify and address potential issues in rental properties, enhancing the overall living experience for tenants.
 
-**1) What is RentSafeTO**
+**1) What is RentSafeTO**<br>
     a. When: RentSafeTO was introduced as part of the city's ongoing efforts to improve rental housing standards and address concerns related to building safety and tenant welfare.
 
     b. Why: The program was launched to respond to the increasing demand for rental properties in Toronto, particularly after the post-COVID-19 surge in housing prices. As more people opt for rental housing, ensuring the safety and livability of rental units has become crucial.
