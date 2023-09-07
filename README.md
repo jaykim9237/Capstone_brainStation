@@ -97,20 +97,20 @@ It is important to note that the dataset contains missing values (NaN) in severa
 
 ## 4. Models
 
-**1) Model Methods<br>
+**1) Model Methods**<br>
 - Linear Regression Model:
 
-R-squared: 0.98
-Mean Absolute Error: 8.15
-Mean Squared Error: 100.26
-Root Mean Squared Error (RMSE): 10.01
+R-squared: 0.98<br>
+Mean Absolute Error: 8.15<br>
+Mean Squared Error: 100.26<br>
+Root Mean Squared Error (RMSE): 10.01<br>
 
 - Random Forest Regression Model:
 
-R-squared: 0.96
-Mean Absolute Error: 1.53
-Mean Squared Error: 4.18
-RMSE: 2.04
+R-squared: 0.96<br>
+Mean Absolute Error: 1.53<br>
+Mean Squared Error: 4.18<br>
+RMSE: 2.04<br>
 
 - Decision Tree with SMOTE (Synthetic Minority Over-sampling Technique):
 
@@ -118,10 +118,10 @@ Accuracy: 0.8256387270282385
 
 - K-Nearest Neighbor
 
-Mean Cross-Validation Score: 0.6706
+Mean Cross-Validation Score: 0.6706<br>
 Standard Deviation of Cross-Validation Scores: 0.004265
 
-**2) Model Conclusion<br>
+**2) Model Conclusion**<br>
 
 The analysis employed three different regression models to predict outcomes. The linear regression model achieved a high R-squared value of 0.98, indicating a strong fit to the data. However, it had a relatively higher mean absolute error (MAE) and root mean squared error (RMSE), suggesting some variability in prediction accuracy.
 
@@ -132,12 +132,12 @@ Lastly, the decision tree model, enhanced with SMOTE to address data imbalance, 
 Additionally, the K-Nearest Neighbors (KNN) model was evaluated using cross-validation, resulting in a mean cross-validation score of 0.6706380968239112 with a standard deviation of 0.0042657268177913295.
 
 ## 5. Conclusions
-**1) Conclusion
+**1) Conclusion**<br>
 In the dataset, there is a specific sample that consistently scored 3 points in all evaluations, resulting in a perfect evaluation score of 100. This seems to go beyond a mere calculation of evaluation indices and likely reflects considerations related to the registration year, building year, and location. However, in the regression model, machine learning appears to have generated its own formula, resulting in an exceptionally high accuracy that may seem more like a perfect match than a prediction.
 
 As a result, in this particular case, it can be argued that a classification model is more appropriate for making predictions. Among the classification models, the decision tree model stands out as the most accurate option and is, therefore, the preferred choice for our analysis.
 
-**2) Threshholds
+**2) Threshholds**<br>
 Logistic regression is indeed known as a powerful classification model. However, in our specific case, the binary classification approach presented challenges due to the extremely low occurrence rate of cases where evaluations resulted in disqualification (approximately 1%). This imbalance in the dataset made it difficult to effectively use logistic regression as it tends to perform poorly when the classes are heavily imbalanced.
 
 To address this data imbalance issue, we employed SMOTE (Synthetic Minority Over-sampling Technique). While it helped improve the model's performance, it still faced challenges in handling the imbalance effectively.
