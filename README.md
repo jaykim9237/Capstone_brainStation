@@ -5,7 +5,7 @@ Predicting RentSafeTO: A Machine Learning Solution for Safer Housing Evaluation
 
 ## Team
 - Author : Hyunjung Kim
-- Date : JUL 23, 2023 ~ 
+- Date : JUL 23, 2023 ~ Sep 9, 2023
 - Affiliatoin : brainStation
 
 ## Index
@@ -28,7 +28,6 @@ Predicting RentSafeTO: A Machine Learning Solution for Safer Housing Evaluation
 **4. Models**
  - Model Methods
  - Model Conclusion
- - Model Evaluation
 
 **5. Conclusions**
  - Conclusion
@@ -90,7 +89,57 @@ For more detailed information about RentSafeTO, you can refer to the official we
 **1) The Data Source**<br>
 Our project relies on the rich dataset provided by the Toronto open data site, encompassing a diverse range of variables related to apartment building evaluations. By analyzing this comprehensive dataset, we aim to unearth hidden patterns and correlations, enabling our predictive model to make accurate assessments of building safety.
 
+**2) Data Shape Analysis<br>
+The dataset comprises 11,760 rows and 40 columns. This dataset is characterized by a substantial number of rows and columns, with various data types (integers, floats, and objects) representing different aspects of the buildings and properties under evaluation.
+
+**3) Data thresholds<br>
+It is important to note that the dataset contains missing values (NaN) in several columns, which may affect the quality of predictions. Additionally, the dataset undergoes regular updates, leading to potential challenges for predictive modeling due to evolving column names and potential changes in data distribution over time.
+
 ## 4. Models
 
-## 5. Conclusions
+**1) Model Methods<br>
+- Linear Regression Model:
 
+R-squared: 0.98
+Mean Absolute Error: 8.15
+Mean Squared Error: 100.26
+Root Mean Squared Error (RMSE): 10.01
+
+- Random Forest Regression Model:
+
+R-squared: 0.96
+Mean Absolute Error: 1.53
+Mean Squared Error: 4.18
+RMSE: 2.04
+
+- Decision Tree with SMOTE (Synthetic Minority Over-sampling Technique):
+
+Accuracy: 0.8256387270282385
+
+- K-Nearest Neighbor
+
+Mean Cross-Validation Score: 0.6706
+Standard Deviation of Cross-Validation Scores: 0.004265
+
+**2) Model Conclusion<br>
+
+The analysis employed three different regression models to predict outcomes. The linear regression model achieved a high R-squared value of 0.98, indicating a strong fit to the data. However, it had a relatively higher mean absolute error (MAE) and root mean squared error (RMSE), suggesting some variability in prediction accuracy.
+
+In contrast, the random forest regression model yielded a slightly lower R-squared value of 0.96 but demonstrated lower MAE and RMSE, indicating improved prediction accuracy.
+
+Lastly, the decision tree model, enhanced with SMOTE to address data imbalance, achieved an accuracy of 0.83. The classification report shows that it performed well in classifying different categories, especially for class 3.
+
+Additionally, the K-Nearest Neighbors (KNN) model was evaluated using cross-validation, resulting in a mean cross-validation score of 0.6706380968239112 with a standard deviation of 0.0042657268177913295.
+
+## 5. Conclusions
+**1) Conclusion
+In the dataset, there is a specific sample that consistently scored 3 points in all evaluations, resulting in a perfect evaluation score of 100. This seems to go beyond a mere calculation of evaluation indices and likely reflects considerations related to the registration year, building year, and location. However, in the regression model, machine learning appears to have generated its own formula, resulting in an exceptionally high accuracy that may seem more like a perfect match than a prediction.
+
+As a result, in this particular case, it can be argued that a classification model is more appropriate for making predictions. Among the classification models, the decision tree model stands out as the most accurate option and is, therefore, the preferred choice for our analysis.
+
+**2) Threshholds
+Logistic regression is indeed known as a powerful classification model. However, in our specific case, the binary classification approach presented challenges due to the extremely low occurrence rate of cases where evaluations resulted in disqualification (approximately 1%). This imbalance in the dataset made it difficult to effectively use logistic regression as it tends to perform poorly when the classes are heavily imbalanced.
+
+To address this data imbalance issue, we employed SMOTE (Synthetic Minority Over-sampling Technique). While it helped improve the model's performance, it still faced challenges in handling the imbalance effectively.
+
+It's important to note that having more data related to disqualifications, if collected in future research, could lead to better results. This would allow for a more balanced dataset and potentially enhance the performance of classification models like logistic regression.
