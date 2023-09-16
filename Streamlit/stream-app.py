@@ -4,9 +4,10 @@ import pickle
 from PIL import Image
 
 
+
 st.markdown(
     """
-    <h1 style='text-align: center;'>Evaluate Your Apartment</h1>
+    <h1 style='text-align: center;'>Let's Predict Your Apartment Score!</h1>
     """,
     unsafe_allow_html=True
 )
@@ -81,7 +82,7 @@ st.markdown(
     """
     <div style="text-align: center;">
         <h2>Predicted Apartment Score:</h2>
-        <h3>{:.2f} %</h3>
+        <h3>{:.2f} / 100</h3>
     </div>
     """.format(rounded_predicted_score),
     unsafe_allow_html=True
