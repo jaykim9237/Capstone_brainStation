@@ -89,10 +89,10 @@ For more detailed information about RentSafeTO, you can refer to the official we
 **1) The Data Source**<br>
 Our project relies on the rich dataset provided by the Toronto open data site, encompassing a diverse range of variables related to apartment building evaluations. By analyzing this comprehensive dataset, we aim to unearth hidden patterns and correlations, enabling our predictive model to make accurate assessments of building safety.
 
-**2) Data Shape Analysis<br>
+**2) Data Shape Analysis**<br>
 The dataset comprises 11,760 rows and 40 columns. This dataset is characterized by a substantial number of rows and columns, with various data types (integers, floats, and objects) representing different aspects of the buildings and properties under evaluation.
 
-**3) Data thresholds<br>
+**3) Data thresholds**<br>
 It is important to note that the dataset contains missing values (NaN) in several columns, which may affect the quality of predictions. Additionally, the dataset undergoes regular updates, leading to potential challenges for predictive modeling due to evolving column names and potential changes in data distribution over time.
 
 ## 4. Models
